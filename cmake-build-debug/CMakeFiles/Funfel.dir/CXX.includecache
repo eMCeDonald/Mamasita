@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Sbox.h
+
+../include/functions.h
+
+../include/round_shift_table.h
+
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/functions.cpp
+functions.h
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/functions.h
+iostream
+-
+fstream
+-
+ctime
+-
+cmath
+-
+round_shift_table.h
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/round_shift_table.h
+Sbox.h
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/Sbox.h
+
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/main.cpp
+iostream
+-
+functions.h
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/functions.h
+round_shift_table.h
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/src/round_shift_table.h
+cstdlib
+-
+fstream
+-
+

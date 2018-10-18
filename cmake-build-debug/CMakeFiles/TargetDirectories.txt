@@ -1,0 +1,3 @@
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/cmake-build-debug/CMakeFiles/Funfel.dir
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Kuba Komputer/Studia/3 semestr/Krypto/Funfel1/Funfel/cmake-build-debug/CMakeFiles/rebuild_cache.dir
