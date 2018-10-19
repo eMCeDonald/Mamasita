@@ -56,10 +56,6 @@ int main() {
 
 
     //TEST
-//bhgggggggggggggjv
-//vgjvgvjgvjvjgv
-//jgvgvjvgvjvgj
-
 
     for (int j = 0; j < 16 ; ++j) {
         shift_key_bits(j,first_half_key);
