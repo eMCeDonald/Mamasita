@@ -17,4 +17,5 @@ void PermutationWithExtension (int *right_half, int *extended_right_tab);
 void shift_key_bits(int round_number, int *half);
 void PermutationWithCompression (int *right_half ,int *left_half, int *compressed_tab);
 void XOR (int *first_b,int *second_b);
+void shift_key_bits_right(int round_number, int *half);
 #endif //KRYPTO_1_FUNCTIONS_H

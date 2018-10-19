@@ -3,8 +3,10 @@
 #include <fstream>
 #include <ctime>
 #include <cmath>
+#include <cstdlib>
 #include "round_shift_table.h"
 #include "Sbox.h"
+#include "round_shift_table.h"
 static const char ALFABET [] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
 using namespace std;
 
@@ -142,18 +144,13 @@ void create_key (int* key){
 }
 
 void separate_key(int* fhalf, int* shalf, int* key){
-    int j=0;
-    for (int i=0; i<56; i++)
+
+    int a=28;
+    for (int i=0;i<a;i++)
     {
-        if (i < 27)
-        {
-            fhalf[i]=key[i];
-        }
-        else
-        {
-            shalf[j]=key[i];
-            j++;
-        }
+        fhalf[i]=key[i];
+        shalf[i]=key[a+i];
+
     }
 }
 
@@ -164,24 +161,24 @@ void PermutationWithExtension (int *right_half, int *extended_right_tab){
 }
 
 void shift_key_bits(int round_number, int *half){
-    int tmp[27];
+    int tmp[28];
     int i_tmp;
 
-    for (int i=0;i<27;i++)
+    for (int i=0;i<28;i++)
     {
         tmp[i]=half[i];
     }
 
-    for (int i=0;i<27;i++)
+    for (int i=0;i<28;i++)
     {
 
         i_tmp=i-round_shift_table[round_number];
 
         if (i_tmp==-1)
-            i_tmp=26;
+            i_tmp=27;
 
         if (i_tmp==-2)
-            i_tmp=25;
+            i_tmp=26;
 
         half[i_tmp]=tmp[i];
 
@@ -194,11 +191,37 @@ void PermutationWithCompression (int *right_half ,int *left_half, int *compresse
     for (int i = 0; i < 28 ; ++i)
        temp_tab[i]=left_half[i];
     for (int i = 0; i < 28 ; ++i)
-        temp_tab[i+28]=right_half[i+28];
+        temp_tab[i+28]=right_half[i];
     for (int j = 0; j <48 ; ++j)
         compressed_tab[j]=temp_tab[recipe_for_compresion[j]];
 }
 
 void XOR (int *first_b,int *second_b){
     *first_b = (*first_b + *second_b) % 2;
+}
+
+void shift_key_bits_right(int round_number, int *half) {
+
+    int tmp[28];
+    int i_tmp;
+
+    for (int i = 0; i < 28; i++) {
+        tmp[i] = half[i];
+    }
+
+    for (int i = 0; i < 28; i++) {
+
+        i_tmp = i + round_shift_table_right[round_number];
+
+        if (i_tmp == 28)
+            i_tmp = 0;
+
+
+
+        if (i_tmp == 29)
+            i_tmp = 1;
+
+        half[i_tmp] = tmp[i];
+
+    }
 }

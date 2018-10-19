@@ -7,6 +7,5 @@ CMakeFiles/Funfel.dir/src/functions.cpp.obj: ../include/round_shift_table.h
 CMakeFiles/Funfel.dir/src/functions.cpp.obj: ../src/functions.cpp
 
 CMakeFiles/Funfel.dir/src/main.cpp.obj: ../include/functions.h
-CMakeFiles/Funfel.dir/src/main.cpp.obj: ../include/round_shift_table.h
 CMakeFiles/Funfel.dir/src/main.cpp.obj: ../src/main.cpp
 
